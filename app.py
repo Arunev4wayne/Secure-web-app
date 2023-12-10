@@ -28,8 +28,9 @@ def apply_to_job(id):
   data = request.form
   # store this in db
   # send an email
-  # display an acknowledgment 
-  return render_template('application_submitted.html', application=data)
+  # display an acknowledgment
+  job = load_job_from_db(id)
+  return render_template('application_submitted.html', job=job, application=data)
 
 if __name__ == "__main__":
   app.run(host='0.0.0', debug=True)  
