@@ -2,9 +2,25 @@
 <html>
   <head>
     <title>{{job.title}} - SWD</title>
+{% include 'bootstrap.html' %}
   </head>
   <body>
-   <h3>Title</h3> 
-    <p>{{job.title}}</p>
+{% include 'nav.html' %}
+{% include 'banner.html' %}
+ <div class="container">
+      <h1 class="text-center mt-2 mb-4">Secure Web App</h1>
+   <h3>{{job.title}}</h3> 
+    <p></p>
+    <h3>Location</h3>
+    <p>{{job.location}}</p>
+    <h3>Salary</h3>
+    <p>{{job.currency}}{{job.salary}}</p>
+    <h3>Responsibilities</h3>
+    <p>{{job.responsibilities}}</p>
+    <h3>Requirements</h3>
+    <p>{{job.requirements}}</p>
+   {% include 'application_form.html' %}
+ </div>
+{% include 'footer.html' %}
   </body>
 </html>
