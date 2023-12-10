@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, render_template, request
 
-from database import load_job_from_db, load_jobs_from_db
+from database import add_appl_to_db, load_job_from_db, load_jobs_from_db
 
 app = Flask(__name__)
 
@@ -30,6 +30,7 @@ def apply_to_job(id):
   # send an email
   # display an acknowledgment
   job = load_job_from_db(id)
+  add_appl_to_db(id, data)
   return render_template('application_submitted.html', job=job, application=data)
 
 if __name__ == "__main__":
