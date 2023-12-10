@@ -10,16 +10,25 @@
         height: 180px;
         width: 100%;
         object-fit: cover;
+        margin-bottom: 16px;
       }
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" width="200" height="320">
     <div class="container">
       <h1 class="text-center mt-2 mb-4">Secure Web App</h1>
-      <img class="img-fluid" id="banner" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" width="200" height="320">
-      <h2 class="text-center">About Secure web app</h2>
+      <div class="row">
+        <div class="col-6">
       <p class="lead">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut erat erat. Sed vel velit sed orci sollicitudin eleifend. Fusce enim libero, aliquet in lorem vel, ornare commodo urna. Fusce et facilisis tortor. Vivamus efficitur varius odio, non convallis elit tempus ac. Vivamus cursus nulla ullamcorper tellus ullamcorper interdum. Pellentesque pharetra vel justo ac facilisis. Fusce erat metus, convallis tincidunt laoreet non, laoreet ac lectus. Suspendisse vitae urna vitae diam malesuada venenatis non nec felis. Curabitur at magna sapien. Phasellus ultrices pharetra velit, non bibendum lectus ultrices quis. Ut augue est, semper vel faucibus ultricies, bibendum id tellus. Aenean interdum odio nec leo pharetra, quis ultricies libero vestibulum. Ut fermentum tellus eu sem congue, in dapibus sem aliquet. Vestibulum rutrum elit non felis molestie, vitae laoreet ex varius.</p>
+        </div>
+        <div class="col-6">
+        <img src="https://asset.gallup.com/p/WORKPLACEV9CMS/49821ce7-b62a-4bcb-9013-0a21bed58ed5.jpg" style="height: 320px; width: 400px; border-radius: 8px;">
+          </div>
+      </div>
+      </div>
       <h2 class= "text-center mt-2 mb-4"> Job openings </h2>
       <p class="text-center">
         <div>
@@ -31,9 +40,10 @@
       </p>
       <div class="text-center">
         <button type="button" class="btn btn-success btn-lg">Contact Us</button>
-        <p class="mt-4">Copyright 2022, Secure Web App</p>
+        <p class="mt-4">Secure Web App</p>
       </div>
       </div>
     </div>
+    {% include 'footer.html' %}
   </body>
 </html>
