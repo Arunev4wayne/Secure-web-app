@@ -30,11 +30,11 @@ def load_job_from_db(job_id):
     else: 
       return dict(rows[0]._asdict())
 
-def add_appl_to_db(job_id, full_ame):
+def add_appl_to_db(jobid, full_ame):
  with engine.connect() as conn:
     insert_query = text(
-        "insert into applications (job_id, full_ame) "
-        "values (:job_id, :full_ame)"
+        "INSERT INTO applications (jobid, full_ame) "
+        "values (:jobid, :full_ame)"
     )
-    conn.execute(insert_query, {'job_id': job_id, 'full_name': full_ame})
+    conn.execute(insert_query, {'jobid': jobid, 'full_ame': full_ame})
                  
